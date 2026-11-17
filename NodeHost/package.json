@@ -5,6 +5,9 @@
   "main": "src/app.js",
   "scripts": {
     "test": "node src/app.js",
+    "start": "node scripts/precompile.js && node src/app.js",
+    "install:linux": "bash scripts/install-linux.sh",
+    "uninstall:linux": "bash scripts/uninstall-linux.sh",
     "postinstall": "patch-package",
     "precompile": "node scripts/precompile.js",
     "compile": "npx pkg -t node14-win . -o src/YTDPwin.exe",
