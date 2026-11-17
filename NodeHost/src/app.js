@@ -261,7 +261,8 @@ const processData = () => {
                 handleExtensionPayload(json)
             }
             else if (json.getNativeVersion) {
-                sendExtensionMessage(true, "VERSION_REQUEST_RECEIVED");
+                // The extension expects nativeVersion as the first response so it
+                // can mark the host as connected and validate the desktop version.
                 sendNativeVersion();
             }
         }
